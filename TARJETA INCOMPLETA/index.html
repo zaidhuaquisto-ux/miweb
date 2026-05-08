@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+
+<div class="page-wrapper">
+    <!--<div class="div"></div> -->
+    
+<div class="container">
+    <h1 class="title">Comprar Ahora</h1>
+
+    <!-- Tarjeta que se llena automáticamente -->
+    <div class="card">
+        <div class="card-top">
+            <div class="card-name" id="card-name">Nombre Apellido</div>
+            <div class="card-exp" id="card-exp">MM/AA</div>
+        </div>
+        <div class="card-bottom">
+            <div class="chip"></div>
+            <div class="card-number" id="card-number">#### #### #### ####</div>
+            <div class="logo">VISA</div>
+        </div>
+    </div>
+
+    <!-- Formulario para llenar -->
+    <div class="input-container">
+        <label for="card-number-input">Número de Tarjeta</label>
+        <input type="text" id="card-number-input" maxlength="19" placeholder="#### #### #### ####" oninput="updateCard()">
+
+        <label for="card-name-input">Nombre del Titular</label>
+        <input type="text" id="card-name-input" placeholder="Nombre Apellido" oninput="updateCard()">
+
+        <div class="expiration-cvv-container">
+            <div class="expiration">
+                <label for="card-exp-month">Mes</label>
+                <select id="card-exp-month" oninput="updateCard()">
+                    <option value="" disabled selected>Mes</option>
+                    <option value="01">Ene</option>
+                    <option value="02">Feb</option>
+                    <option value="03">Mar</option>
+                    <option value="04">Abr</option>
+                    <option value="05">May</option>
+                    <option value="06">Jun</option>
+                    <option value="07">Jul</option>
+                    <option value="08">Ago</option>
+                    <option value="09">Sep</option>
+                    <option value="10">Oct</option>
+                    <option value="11">Nov</option>
+                    <option value="12">Dic</option>
+                </select>
+            </div>
+
+            <div class="year">
+                <label for="card-exp-year">Año</label>
+                <input type="number" id="card-exp-year" maxlength="2" placeholder="AA" oninput="updateCard()">
+            </div>
+
+            <div class="cvv">
+                <label for="card-cvv">CVV</label>
+                <input type="text" id="card-cvv" maxlength="3" placeholder="CVV" oninput="updateCard()">
+            </div>
+        </div>
+
+        <button class="buy-button">Comprar Ahora</button>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2026 Mi Tienda Online. Todos los derechos reservados.</p>
+    <p>Compra segura con encriptación SSL.</p>
+    <div class="footer-links">
+        <a href="#">Política de Privacidad</a> |
+        <a href="#">Términos de Servicio</a> |
+        <a href="#">Contacto</a>
+    </div>
+</footer>
+
+</div>
+
+<img src="Ariana.jpeg" class="side-image right" alt="Imagen derecha">
+
+<script src="javas.js" ></script>
+</body>
